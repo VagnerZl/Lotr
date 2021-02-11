@@ -1,0 +1,277 @@
+@font-face {
+    font-family: Kereru;
+    src: url(fonts/Kereru\ Bold.otf);
+}
+
+@font-face {
+    font-family: netzone-font;
+    src: url(fonts/netzone-font.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font: normal normal normal 17px/27px "DM Sans", sans-serif;
+}
+
+nav {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu>li {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    white-space: nowrap;
+    position: relative;
+}
+
+.nav-menu>li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+
+.nav-menu li a:hover {
+    color: red;
+    transition: 0.2s ease-in;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.nav-button {
+    background-color: rgb(189, 19, 19);
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: Kereru;
+    font-size: 20px;
+}
+
+.nav-button:hover {
+    background: #950006;
+    transition: 0.2s ease-in;
+}
+
+.submenu {
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 200px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: .5s ease-in-out;
+}
+
+#submenu-id {
+    margin-left: 0;
+    padding: 0;
+}
+
+#submenu-id .submenu-li {
+    background-color: white;
+    list-style: none;
+    text-align: left;
+    font-size: 13px;
+}
+
+#submenu-id .submenu-li a {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3em;
+    color: black;
+    padding: 10px 10px;
+}
+
+#submenu-id .submenu-li:hover {
+    background-color: red;
+    transition: .3s ease-in-out;
+}
+
+#submenu-id .submenu-li a:hover {
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+.submenu-link:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.video-frame {
+    pointer-events: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-overlay {
+    overflow: hidden;
+    width: 100%;
+    height: 963px;
+}
+
+.main-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    position: relative;
+    font-family: Kereru;
+    font-size: 2.9em;
+    line-height: 0.7em;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+h1::before {
+    content: "";
+    font-family: netzone-font;
+    color: #c2262c;
+    display: block;
+    font-size: 15px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.main-p {
+
+    font-size: .8823529412em;
+    line-height: 1.4666666667em;
+    font-style: italic;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.intro-p {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.5882352941em;
+    font-style: italic;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+.ring {
+    position: absolute;
+    left: -170px;
+}
+
+.brush-effect {
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    background-image: url(img/white-swish.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.map-section {
+    position: relative;
+    background-image: url(img/background-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.map-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-section-content-intro {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-locations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+
+    width: 40px;
+}
+
+.slider-header {
+    font-family: Kereru;
+    font-size: 2.5em;
+    line-height: 0.7em;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.arrow {
+
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.left-icon {
+    padding-right: 18px;
+}
